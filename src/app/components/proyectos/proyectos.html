@@ -1,0 +1,16 @@
+<section class="py-5 proyectos-section">
+  <div class="proyectos-container">
+
+    <div>
+      @for (proyecto of proyectos; track proyecto.id) {
+        <div>
+          <app-proyecto-card [elemento]="proyecto"></app-proyecto-card>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+
+
+

@@ -1,1 +1,343 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Istok Web", sans-serif;
+}
+
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+  background: linear-gradient(45deg, rgb(90,106,185), rgb(61,78,139), rgb(48,76,176), rgb(60,87,184)) ;
+  background-size: 400% 400%;
+  animation: cambiar 10s ease-in-out infinite;
+  position: relative;
+}
+
+ion-content {
+  --overflow: auto; /* habilita scroll vertical */
+  --background: linear-gradient(45deg, rgb(90,106,185), rgb(61,78,139), rgb(48,76,176), rgb(60,87,184));
+  background-size: 400% 400%;
+  animation: cambiar 10s ease-in-out infinite;
+}
+
+
+
+
+/* ================= HEADER ================= */
+header {
+  top: 0;
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.2);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+    position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  color: white;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  background: rgb(137,66,188);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+header .logo:hover {
+  color: rgb(137,66,188);
+  background: white;
+}
+
+.navbar {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.navbar li a:hover {
+  border-bottom: 2px solid white;
+}
+
+/* ================= SECCIONES ================= */
+section {
+  display: flex;
+  flex-direction: column; /* apilar tarjetas */
+  justify-content: flex-start; /* no centrar verticalmente */
+  align-items: stretch; /* que ocupe todo el ancho */
+  min-height: auto; /* o eliminar 100vh */
+  padding: 120px 20px 60px;
+}
+
+/* ================= HERO ================= */
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.tituloBox {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.tituloBox h2 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.tituloBox h2 span {
+  background: rgb(137,66,188);
+  padding: 0 10px;
+  border-radius: 20px;
+}
+
+.tituloBox p {
+  font-size: 1.2rem;
+  color: white;
+  margin: 15px 0;
+}
+
+.tituloBox a {
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(137,66,188);
+  background: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.tituloBox a:hover {
+  background: rgb(137,66,188);
+  color: white;
+}
+
+.imgBox {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.imgBox img {
+  max-width: 20%;
+  height: auto;
+  padding-left: 8px;
+}
+
+/* ================= PROYECTOS ================= */
+.proyectos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-top: 80px;
+}
+
+:root {
+  --bs-primary: #1e30f3;
+  --bs-secondary: #e21e80;
+}
+
+.bg-gradient-primary-to-secondary {
+  background: linear-gradient(90deg, var(--bs-primary), var(--bs-secondary));
+}
+
+
+.proyectos-section .card {
+    flex: 1 1 100%; /* ocupar todo el ancho disponible */
+    max-width: 100%; /* eliminar límite de ancho */
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+    margin-bottom:40px;
+}
+
+.proyectos-section .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+
+.proyectos-section .card-body {
+  width: 100%;
+  max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+
+
+.proyectos-section .card-body img {
+  flex: 0 1 auto; /* no crecer automáticamente */
+  max-width: 100%; /* nunca más ancho que su contenedor */
+  height: auto;    /* mantiene proporción */
+  object-fit: contain; /* ajusta dentro del contenedor sin recortar */
+  border-radius: 8px;
+}
+/* ================= FOOTER ================= */
+.redesSociales {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.redesSociales li a {
+  color: white;
+  font-size: 2em;
+  transition: 0.3s;
+}
+
+.redesSociales li a:hover {
+  filter: blur(1px);
+}
+
+.copyright {
+  text-align: center;
+  color: white;
+  padding-bottom: 30px;
+}
+
+/* ================= FORMULARIO ================= */
+.formulariobox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(161,162,221);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formulariobox h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+fieldset input,
+fieldset textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+fieldset button {
+  padding: 10px;
+  background: rgb(137,66,188);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+fieldset button:hover {
+  background: white;
+  color: rgb(137,66,188);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .proyectos-section .card {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .proyectos-section .card-body {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-right: 0; /* evita que desborde horizontalmente */
+  }
+
+  .proyectos-section .card-body img {
+      max-width: 90%;
+      margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  header, .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .tituloBox h2 {
+    font-size: 1.8rem;
+  }
+
+  .tituloBox p {
+    font-size: 1rem;
+  }
+
+  .imgBox img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo {
+    font-size: 1rem;
+  }
+
+  .navbar li a {
+    font-size: 0.8rem;
+  }
+
+  .tituloBox h2 {
+    font-size: 1.5rem;
+  }
+
+  .tituloBox p {
+    font-size: 0.9rem;
+  }
+
+  .formulariobox {
+    width: 90%;
+    padding: 15px;
+  }
+}
